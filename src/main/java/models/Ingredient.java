@@ -3,29 +3,36 @@ package models;
 import java.io.Serializable;
 
 public class Ingredient implements Serializable {
-
-    // ******* CLASS PROPERTIES ********* //
+    // *********** CLASS PROPERTIES ************* //
 
     // id
     private long id;
-    // ingredient name (title) i.e. "pickles", "cheese", etc
+    // title
     private String title;
-    // how many of this? 3 pickles? 2 slices of cheese?
+    // quantity
     private int quantity;
 
-    // ******* CONSTRUCTOR ********* //
+    // *********** CONSTRUCTOR ************* //
 
-    // zero-argument constructor, so Java can reserve space in memory for this when we finally create it! (It can hold the place in memory while we define things like 'title', 'quantity', etc)
-    public Ingredient() {};
+    // zero-argument constructor - so Java can reserve this space in memory, before we even set the properties (with NO null-pointer exceptions)
+    public Ingredient() {}
 
-    // ******* GETTERS AND SETTERS ********* //
+    // *********** GETTERS AND SETTERS ************* //
 
     public long getId() { return id; }
     public void setId(long id) { this.id = id; }
 
-    public String getTitle() { return title; }
-    public void setTitle(String title) { this.title = title; }
+    public String getTitle() {
+        return title;
+    }
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
-    public int getQuantity() { return quantity; }
-    public void setQuantity(int quantity) { this.quantity = quantity; }
+    public int getQuantity() {
+        return quantity;
+    }
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
 }

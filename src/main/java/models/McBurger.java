@@ -3,35 +3,37 @@ package models;
 import java.io.Serializable;
 import java.util.List;
 
+// This 'Bean' will represent an individual burger
+//  it must implement the Serializable class
 public class McBurger implements Serializable {
-
-    // ******* CLASS PROPERTIES ********* //
+    // *********** CLASS PROPERTIES ************* //
 
     // id
     private long id;
     // burger name (title)
     private String title;
     // price in cents
-    private long priceInCents;
-    // description
+    private int priceInCents;
+    // description of the burger
     private String description;
-    // ingredients
+    // ingredients (list)
     private List<Ingredient> ingredients;
 
-    // ******* CONSTRUCTOR ********* //
+    // *********** CONSTRUCTOR ************* //
 
-    // zero-argument constructor, so Java can reserve space in memory for this when we finally create it! (It can hold the place in memory while we define things like 'title', 'ingredients', etc)
+    // zero-argument constructor, so Java can reserve space in memory for this when we finally create and define it
     public McBurger() {}
 
-    // ******* GETTERS AND SETTERS ********* //
+    // *********** GETTERS AND SETTERS ************* //
+
     public long getId() { return id; }
     public void setId(long id) { this.id = id; }
 
     public String getTitle() { return title; }
     public void setTitle(String title) { this.title = title; }
 
-    public long getPriceInCents() { return priceInCents; }
-    public void setPriceInCents(long priceInCents) { this.priceInCents = priceInCents; }
+    public int getPriceInCents() { return priceInCents; }
+    public void setPriceInCents(int priceInCents) { this.priceInCents = priceInCents; }
 
     public String getDescription() { return description; }
     public void setDescription(String description) { this.description = description; }
